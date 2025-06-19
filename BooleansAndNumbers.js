@@ -132,3 +132,112 @@ console.log(displayName); // "Guest"
 
 
                                                                               // Math Object//
+
+// Math.random(); // returns a random number between 0 (inclusive) and 1 (exclusive)
+const randomNum = Math.random();
+console.log(randomNum); // e.g., 0.123456789
+
+// Math.min(); // returns the smallest of zero or more numbers
+const minNum = Math.min(5, 10, 2, 8); // returns the smallest number
+console.log(minNum); // 2
+// Math.max(); // returns the largest of zero or more numbers
+const maxNum = Math.max(5, 10, 2, 8); // returns the largest number 
+console.log(maxNum); // 10
+
+// Math.ceil(); // returns the smallest integer greater than or equal to a given number
+const ceilNum = Math.ceil(4.2); // rounds up to the nearest integer
+console.log(ceilNum); // 5
+
+// Math.floor(); // returns the largest integer less than or equal to a given number
+const floorNum = Math.floor(4.8); // rounds down to the nearest integer
+console.log(floorNum); // 4
+
+// Math.round(); // returns the nearest integer to a given number
+const roundNum = Math.round(4.5); // rounds to the nearest integer
+console.log(roundNum); // 5
+
+// Math.trunc(); // returns the integer part of a given number (removes the decimal part)
+const truncNum = Math.trunc(4.9); // removes the decimal part
+console.log(truncNum); // 4
+
+// Math.sqrt(); // returns the square root of a given number
+const sqrtNum = Math.sqrt(16); // calculates the square root
+console.log(sqrtNum); // 4
+// Math.cbrt(); // returns the cube root of a given number
+const cbrtNum = Math.cbrt(27); // calculates the cube root
+console.log(cbrtNum); // 3
+
+// Math.abs(); // returns the absolute value of a given number
+const absNum = Math.abs(-5); // returns the positive value
+console.log(absNum); // 5
+
+// Math.pow(); // returns the result of raising a number to a power
+const powNum = Math.pow(2, 3); // calculates 2 raised to the power of 3
+console.log(powNum); // 8
+
+// Math in range for example 1 to 100
+const minRange = 1;
+const maxRange = 100;
+const randomInRange = Math.floor(Math.random() * (maxRange - minRange + 1)) + minRange; // generates a random number between 1 and 100
+console.log(randomInRange); // e.g., 42
+
+
+
+                                                                              // NaN Property//
+
+// NaN (Not a Number) is a special value in JavaScript that represents an invalid number
+const invalidNumber = "hello" / 2; // division by a string results in NaN
+console.log(invalidNumber); // NaN
+// NaN is of type number
+console.log(typeof NaN); // "number"    
+// NaN is not equal to itself
+console.log(NaN === NaN); // false
+// To check if a value is NaN, use the isNaN() function
+console.log(isNaN(invalidNumber)); // true
+// To check if a value is a valid number, use the Number.isNaN() function
+console.log(Number.isNaN(invalidNumber)); // true
+// NaN can also result from operations with undefined or null
+const undefinedValue = undefined + 5; // adding undefined results in NaN
+console.log(undefinedValue); // NaN
+
+
+
+                                                                              // parseFloat() and parseInt() //
+
+// These functions are used to convert strings to numbers, Int is when you want the integer number and Float is when you want the decimal number.
+
+// parseFloat() converts a string to a floating-point number
+const floatString = "3.14";
+const parsedFloat = parseFloat(floatString); // converts string to float
+console.log(parsedFloat); // 3.14
+
+// parseInt() converts a string to an integer
+const intString = "42";
+const parsedInt = parseInt(intString); // converts string to integer
+console.log(parsedInt); // 42
+// parseInt() can also take a second argument for the radix (base)
+const hexString = "0xFF";
+const parsedHex = parseInt(hexString, 16); // converts hex string to integer
+console.log(parsedHex); // 255
+
+
+
+                                                                              // .toFixed() //
+
+// Is used to format a number to a fixed number of decimal places, but let the number as a string.
+
+const number = 3.1415967;
+const fixedNumber = number.toFixed(2); // formats to 2 decimal places
+console.log(fixedNumber); // "3.14"
+
+// so if you want 5 decimal places
+const fixedNumberFive = number.toFixed(5); // formats to 5 decimal places
+console.log(fixedNumberFive); // "3.14159"
+
+// if you have it void (0) it will return the number without decimal places
+const fixedNumberVoid = number.toFixed(0); // formats to 0 decimal places
+console.log(fixedNumberVoid); // "3"
+// Note: .toFixed() returns a string, so if you need it as a number, you can convert it back using parseFloat()
+const fixedNumberAsFloat = parseFloat(fixedNumber); // converts back to number
+console.log(fixedNumberAsFloat); // 3.14
+
