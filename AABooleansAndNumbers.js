@@ -241,3 +241,71 @@ console.log(fixedNumberVoid); // "3"
 const fixedNumberAsFloat = parseFloat(fixedNumber); // converts back to number
 console.log(fixedNumberAsFloat); // 3.14
 
+
+
+                                                                              // null and undefined//
+
+// null is an intentional absence of any object value
+let emptyValue = null; // explicitly set to null
+console.log(emptyValue); // null
+
+// undefined is a variable that has been declared but not assigned a value
+let uninitializedValue; // declared but not assigned
+console.log(uninitializedValue); // undefined   
+
+// Both null and undefined are falsy values in JavaScript
+console.log(Boolean(emptyValue)); // false
+console.log(Boolean(uninitializedValue)); // false
+
+// To check if a variable is null or undefined, you can use strict equality
+console.log(emptyValue === null); // true
+console.log(uninitializedValue === undefined); // true
+
+// You can also use typeof to check their types
+console.log(typeof emptyValue); // "object" (quirk in JS)
+console.log(typeof uninitializedValue); // "undefined"
+
+
+                                                                              // else if vs switch //
+
+// else if is used for multiple conditions that can be checked sequentially
+const scores = 85;
+if (scores >= 90) {
+    console.log("Grade: A");
+}   else if (scores >= 80) {
+    console.log("Grade: B");
+}   else if (scores >= 70) {
+    console.log("Grade: C");
+}   else if (scores >= 60) {
+    console.log("Grade: D");
+}   else {
+    console.log("Grade: F");
+}   
+// switch is used for multiple cases based on a single expression
+const day = 3; // 1: Monday, 2: Tuesday, 3: Wednesday, etc.
+switch (day) {  
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    case 4:
+        console.log("Thursday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+        break;
+    case 7:
+        console.log("Sunday");
+        break;
+    default:
+        console.log("Invalid day");
+}   
+// switch is more readable when you have many cases based on a single value   
