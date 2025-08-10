@@ -86,3 +86,14 @@ console.log(maskEmail("freecodecamp@example.com"));
 console.log(maskEmail("info@test.dev"));
 console.log(maskEmail("user@domain.org"));
 console.log(maskEmail(email))
+
+
+                                                                              // Example3 of function //
+
+function convertCtoF(number) {
+  const convertedF = number * (9/5) + 32;
+  return convertedF;
+}
+
+console.log(convertCtoF(-30)); // -22
+console.log(convertCtoF(-10)); // 14
