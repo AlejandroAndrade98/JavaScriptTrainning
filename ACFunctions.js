@@ -58,3 +58,31 @@ function getLoanMessage(annualIncome, creditScore) {
   }
 }
 
+console.log(getLoanMessage(70000, 720)); // "You qualify for a duplex, condo, and car loan."
+console.log(getLoanMessage(50000, 690)); // "You qualify for a condo and car loan."
+console.log(getLoanMessage(35000, 660)); // "You qualify for a car loan."
+console.log(getLoanMessage(25000, 640)); // "You don't qualify for any loans."
+
+
+
+                                                                              // Example2 of function //
+
+let email = "alejandro@hotmail.com"
+
+function maskEmail(email) {
+  const atIndex = email.indexOf("@");
+
+  const username = email.slice(0, atIndex);
+  const domain = email.slice(atIndex);
+
+  const limits = Math.max(0, username.length - 2);
+  const changeToSimbols = "*".repeat(limits);
+
+  return username[0] + changeToSimbols + username[username.length -1] + domain;
+}
+
+console.log(maskEmail("apple.pie@example.com"));
+console.log(maskEmail("freecodecamp@example.com"));
+console.log(maskEmail("info@test.dev"));
+console.log(maskEmail("user@domain.org"));
+console.log(maskEmail(email))
