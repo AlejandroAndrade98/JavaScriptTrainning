@@ -116,3 +116,21 @@ function isLeapYear(year) {
 
 const result = isLeapYear(year);
 console.log(result);
+
+
+                                                                              // Example5 "Trucated" //
+
+function truncateString(string, number) {
+  
+  const trucated = string.slice(0, number);
+  
+  if (string.length <= number) {
+    return string;
+  } else if (string.length > number) {
+    return (trucated + "...");
+  } else {
+    return `invalid value`;
+  } 
+}
+  
+console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8));
