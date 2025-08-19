@@ -134,3 +134,20 @@ function truncateString(string, number) {
 }
   
 console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8));
+
+
+                                                                              // Example5 "Check ending" //
+
+
+function confirmEnding(string1, string2) {
+
+  const lastPart = string1.slice(-string2.length);
+
+  if (lastPart === string2) {
+    return true
+  } else {
+    return false
+  }
+};
+
+console.log(confirmEnding("Bastian", "n"));
